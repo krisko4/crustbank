@@ -27,7 +27,7 @@ As mentioned above, NestJS imposes an architecture, which is based on modules, c
 
 ### Design patterns & principles
 
-NestJS framework provides an IoC container, which is responsible for the management of components lifecycle. It means that the programmer does not have to neither instantiate or destroy objects - it is done automatically (under the hood). The dependencies between classes are injected through constructors, which is useful for tests. For example, the user service injects the user repository through the constructor, and so does the repository with data model.
+NestJS framework provides an IoC container, which is responsible for the management of components lifecycle. It means that the programmer does neither have to instantiate or destroy objects - it is done automatically (under the hood). The dependencies between classes are injected through constructors, which is useful for tests. For example, the user service injects the user repository through the constructor, and so does the repository with data model.
 
 
 ![1_iO7R3erL7nquWs6vfm3cMA](https://user-images.githubusercontent.com/80395610/165049036-ca9bb1ef-18c7-46ac-bc6f-993565789512.png)
