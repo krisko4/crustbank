@@ -74,7 +74,7 @@ Each module includes **.module** file which allows NestJS IoC container to conne
 
 ### Features
 
-The features have been presented in two interfaces - **TransferInterface** and **UserInterface**. 
+The features have been presented in two interfaces - **TransferInterface** and **UserInterface** and implemented by equivalent services. 
 
 #### TransferInterface
 
