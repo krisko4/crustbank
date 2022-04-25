@@ -80,7 +80,6 @@ describe('UserService', () => {
       let response: UserDocument;
       beforeEach(async () => {
         response = await service.findUSD(user._id);
-        console.log(response);
       });
       it('should return pln account', () => {
         expect(response.usd.value).toEqual(stub.usd.value);
@@ -187,6 +186,16 @@ describe('UserService', () => {
             value: 0,
           },
         }).save();
+      });
+      it('should throw exception if senderId and receiverId are equal', () => {
+        expect(
+          service.transfer(
+            transferredValue,
+            'NON_EXISTENT_SENDER_ID',
+            sender._id,
+            sender._id,
+          ),
+        ).rejects.toThrowError();
       });
       it('should throw exception if sender has not been found', () => {
         expect(

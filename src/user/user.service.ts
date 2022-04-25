@@ -64,6 +64,8 @@ export class UserService implements UserInterface {
     currency: Currency,
   ) {
     this.fundsValidator.validateFunds(funds);
+    if (senderId === receiverId)
+      throw new Error('sender id and receiver id should not be the same');
     const sender = await this.findById(senderId);
     if (!sender) throw new Error(`User with id: ${senderId} not found`);
     const receiver = await this.findById(receiverId);
